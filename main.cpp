@@ -1,11 +1,13 @@
+//Author: Will Nguyen
+//Date: 05/03/2025
 
 #include "bdc.h"
+#include "biggest-divisible-conglomerate.cpp"
 
 #include <vector>
 #include <cassert>
 #include <iostream>
 #include <set>
-
 
 int main() {
 
