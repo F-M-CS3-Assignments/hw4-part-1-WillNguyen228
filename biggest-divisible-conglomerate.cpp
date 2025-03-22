@@ -78,8 +78,9 @@ vector<int> bdc_helper(const vector<int>& input) {
         // cout << vec_to_string(Rin) << endl; //Debugging lind to check the right side before the recursion
         vector<int> R = bdc_helper(Rin);  //call the recursive function with a subproblem (a smaller input vector)
 
+        //Checks if the elements in R are divisble by input[i], return empty list if not
         for (int element : R) {
-            if (element % input[i] == 0) {
+            if (element % input[i] == 0) { 
                 //combine input[i] with all the numbers which are divisible by input[i] and
                 //form a 
                 // cout << "Combine " << vec_to_string(L) << " and " << vec_to_string(R) << endl;
