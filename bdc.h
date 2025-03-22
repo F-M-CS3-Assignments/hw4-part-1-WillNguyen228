@@ -10,8 +10,8 @@ using namespace std;
 // for one or both of these methods, it is not a substantial difference
 // since the vectors used in this program are not very large.
 string vec_to_string(vector<int> v);
-int find_next_dividend_position(const vector<int>& input, size_t index, int divisor);
-vector<int> sub_vec(const vector<int>& input, int start_index);
+int find_next_dividend_position(const vector<int>& input, size_t index);
+vector<int> sub_vec(const vector<int>& input, size_t start_index);
 vector<int> find_longest_vector(const vector<vector<int>>& candidates);
 vector<int> biggest_divisible_conglomerate(vector<int> input);
 

@@ -1,5 +1,5 @@
 //Author: Will Nguyen
-//Date: 05/03/2025
+//Date: 21/03/2025
 
 #include "bdc.h"
 #include "biggest-divisible-conglomerate.cpp"
@@ -35,5 +35,6 @@ int main() {
 
 	// write your own tests here!
 
+	cout << "ALL TESTS PASSED" << endl;
 	return 0;
 }
