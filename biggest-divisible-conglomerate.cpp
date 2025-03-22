@@ -31,7 +31,8 @@ int find_next_dividend_position(const std::vector<int>& input, size_t index) { /
 
     for (size_t i = index; i < input.size(); i++) {
         // As soon as we find a number divisible by 'divisor', return its index
-        cout << input[i] << " % " << divisor << " = " << input[i] % divisor << endl;
+        // Debugging line to check elements
+        // cout << input[i] << " % " << divisor << " = " << input[i] % divisor << endl;
         if (input[i] % divisor == 0) {
             // cout << "Add " << input[i] << endl;
             return i;
@@ -74,14 +75,14 @@ vector<int> bdc_helper(const vector<int>& input) {
         }
 
         vector<int> Rin = sub_vec(input, j); //subvec is a funciton that make a sub vector from index j to the end
-        cout << vec_to_string(Rin) << endl;
+        // cout << vec_to_string(Rin) << endl; //Debugging lind to check the right side before the recursion
         vector<int> R = bdc_helper(Rin);  //call the recursive function with a subproblem (a smaller input vector)
 
         for (int element : R) {
             if (element % input[i] == 0) {
                 //combine input[i] with all the numbers which are divisible by input[i] and
                 //form a 
-                cout << "Combine " << vec_to_string(L) << " and " << vec_to_string(R) << endl;
+                // cout << "Combine " << vec_to_string(L) << " and " << vec_to_string(R) << endl;
                 L.insert(L.end(), R.begin(), R.end());
                 break;
             }
@@ -94,9 +95,10 @@ vector<int> bdc_helper(const vector<int>& input) {
         candidates.push_back(L); //adding the candidate conglomerate to the list
     }
 
-    for (vector<int> cand : candidates) {
-        cout << vec_to_string(cand) << endl;
-    }
+    //Debugging line ot check for finished candidates
+    // for (vector<int> cand : candidates) {
+    //     cout << vec_to_string(cand) << endl;
+    // }
 
     //return the longest conglomerate in the candidates
     return find_longest_vector(candidates); //find_longest_vector is a function that picks the longest vector out
